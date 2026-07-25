@@ -904,4 +904,7 @@ async def q8_check_alias(request: Request):
         evaluate,
         payload,
     )
+@app.get("/")
+def root():
+    return {"status": "ok"}
 app.include_router(router)
